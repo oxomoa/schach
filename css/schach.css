@@ -1,0 +1,158 @@
+body {
+    font-family:'Verdana',sans-serif;
+    cursor:default;
+}
+
+div#error_box {
+	padding:20px 0 0 40px;
+}
+
+/*Container für transparenten Hintergrund beim Erscheinen der Offizierauswahl*/
+div#overlay {
+    top:0;
+	left:0;
+	position:absolute;
+	height:100%;
+	width:100%;
+	z-index:100;
+	display:none;
+	background-image: url(../img/pixel.png);
+}
+
+/*Container für Figuren der Offiziersauswahl*/
+div.meldung {
+    margin:12px 0 0 26px; /*empirische Werte für die Optik (top right bottom left)*/
+	height:40px;
+    width:40px;
+	float:left;
+    cursor:pointer;
+}
+
+label, legend {
+    cursor:pointer;
+}
+
+/*aufgeklappte auf- und zuklappbare Formularelementengruppen*/
+fieldset.aufgeklappt {
+    border:1px solid #FFFFFF;
+    margin-bottom:23px;
+}
+
+/*zugeklappte auf- und zuklappbare Formularelementengruppen*/
+fieldset.zugeklappt {
+    border:0;
+    border-top:1px solid #FFFFFF;
+    margin:0 0 0 3px;
+}
+
+/*Inhalte zugeklappter auf- und zuklappbarer Formularelementengruppen*/
+fieldset.zugeklappt div, fieldset.zugeklappt fieldset {
+    display:none;
+}
+
+/*nicht-auf- und zuklappbare Formularelementengruppen*/
+fieldset.starr {
+    border:0;
+    border-top:1px solid #FFFFFF;
+    font-size:0.9em;
+}
+
+/*Titel nicht-auf- und zuklappbarer Formularelementengruppen*/
+fieldset.starr legend {
+    cursor:default;
+}
+
+/*Notation des letzten Zuges*/
+p#letzterzug {
+    margin:0px;
+    font-family:'Courier New',monospace;
+}
+
+/*Container für alle Inhalte*/
+div#inhalte {
+    margin:0 auto; /*zentrieren des Containers im Fenster*/
+    width:800px;
+	padding-left:28px;
+}
+
+/*Container für Optionen*/
+div#optionen {
+    margin:15px 20px 0 0; /*empirische Werte für die Optik (top right bottom left)*/
+    width:180px;
+    float:left;
+}
+
+/*Container für geschlagene Figuren*/
+div#aus {
+    margin:15px 0 0 0; /*empirische Werte für die Optik (top right bottom left)*/
+    width:180px;
+    float:left;
+}
+
+/*Container für Schach (Brett + Buchstaben + Zahlen)*/
+div#schach {
+    height:400px; /*Höhe des Brettes + Rahmen + Buchstaben*/
+    width:400px; /*Breite des Brettes + Rahmen + Zahlen*/
+    float:left;
+    position:relative;
+}
+
+/*Schachbrett*/
+div#brett {
+    height:320px;
+    width:320px;
+    float:left;
+}
+
+/*Schachfelder*/
+div.schwarz, div.weiss {
+    height:40px;
+    width:40px;
+    float:left;
+}
+
+/*Container für Figuren*/
+div.figur {
+    height:40px;
+    width:40px;
+    position:absolute;
+    cursor:pointer;
+}
+
+/*Container für geschlagene Figuren*/
+div.ausfigur {
+    height:40px;
+    width:40px;
+    font-size:70%; /*für die Zähler neben den außerhalb stehende Figuren*/
+    float:left;
+}
+
+/*Buchstabenreihe*/
+ul.buchstaben {
+    margin:0 25px 0 0; /*empirische Werte für die Optik (top right bottom left)*/
+    padding:0;
+    line-height:150%; /*für visuellen Abstand zum Schachbrett*/
+    text-align:center;
+}
+
+/*einzelne Buchstaben*/
+ul.buchstaben li {
+    display:inline;
+    padding:15px; /*empirischer Wert zur Einpassung über/unter Feldern*/
+}
+
+/*Zahlenreihe*/
+ul.zahlen {
+    margin:0;
+    padding:0;
+    float:left;
+    line-height:300%; /*empirischer Wert zur Einpassung neben Feldern*/
+    list-style-type:none;
+    text-align:center;
+}
+
+/*einzelne Zahlen*/
+ul.zahlen li {
+    padding:0 6px 0 6px; /*für visuellen Abstand zum Schachbrett (top right bottom left)*/
+    height:40px;
+}

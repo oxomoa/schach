@@ -1,0 +1,112 @@
+/************
+* Allgemein *
+*************/
+
+body {
+    background-color:#87CEFA; /*helles himmelblau*/
+    color:#FF0000; /*rot*/
+}
+
+/*Container für Offiziersauswahl des schwarzen Spielers*/
+div#meldung_s {
+    margin:136px auto 0;  /*empirische Werte für die Optik (top right bottom left)*/
+    height:100px;
+	width:300px;
+	padding-top:20px;
+	background-color:#FF0000; /*rot*/
+	color:#87CEFA; /*helles himmelblau*/
+	text-align:center;
+	display:none;
+}
+
+/*Container für Offiziersauswahl des weißen Spielers*/
+div#meldung_w {
+    margin:136px auto 0;  /*empirische Werte für die Optik (top right bottom left)*/
+    height:100px;
+	width:300px;
+	padding-top:20px;
+	background-color:#87CEFA; /*helles himmelblau*/
+	color:#FF0000; /*rot*/
+	text-align:center;
+	display:none;
+}
+
+/*Schachbrett*/
+div#brett {
+    border:4px double #FF0000; /*rot*/
+}
+
+/*schwarze Schachfelder*/
+div.schwarz {
+    background-color:#FF0000; /*rot*/
+}
+
+/*weiße Schachfelder*/
+div.weiss {
+    background-color:#87CEFA; /*helles himmelblau*/
+}
+
+
+/**********
+* Figuren *
+**********/
+
+/*schwarze Bauern*/
+div.typb1 {
+    background-image:url(../img/bunt/bauer_s.png);
+}
+
+/*schwarze Springer*/
+div.typs1 {
+    background-image:url(../img/bunt/springer_s.png);
+}
+
+/*schwarze Läufer*/
+div.typl1 {
+    background-image:url(../img/bunt/laeufer_s.png);
+}
+
+/*schwarze Türme*/
+div.typt1 {
+    background-image:url(../img/bunt/turm_s.png);
+}
+
+/*schwarze Damen*/
+div.typd1 {
+    background-image:url(../img/bunt/dame_s.png);
+}
+
+/*schwarze Könige*/
+div.typk1 {
+    background-image:url(../img/bunt/koenig_s.png);
+}
+
+/*weiße Bauern*/
+div.typb0 {
+    background-image:url(../img/bunt/bauer_w.png);
+}
+
+/*weiße Springer*/
+div.typs0 {
+    background-image:url(../img/bunt/springer_w.png);
+}
+
+/*weiße Läufer*/
+div.typl0 {
+    background-image:url(../img/bunt/laeufer_w.png);
+}
+
+/*weiße Türme*/
+div.typt0 {
+    background-image:url(../img/bunt/turm_w.png);
+}
+
+/*weiße Damen*/
+div.typd0 {
+    background-image:url(../img/bunt/dame_w.png);
+}
+
+/*weiße Könige*/
+div.typk0 {
+    background-image:url(../img/bunt/koenig_w.png);
+}

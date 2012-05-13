@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>schach.</title>
+        <link rel="stylesheet" type="text/css" media="all" href="css/schach.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/sw.css" title="Schwarzweiß" />
+        <link rel="alternate stylesheet" type="text/css" media="all" href="css/bunt.css" title="Kunterbunt" />
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    </head>
+    <body onload="k_initialisierung()">
+        <div id="overlay">
+            <div id="meldung_w">
+                Bitte einen Offizier auswählen:
+                <div class="typl0 meldung" onclick="tauscheFigur('l')"></div>
+                <div class="typs0 meldung" onclick="tauscheFigur('s')"></div>
+                <div class="typt0 meldung" onclick="tauscheFigur('t')"></div>
+                <div class="typd0 meldung" onclick="tauscheFigur('d')"></div>
+            </div>
+            <div id="meldung_s">
+                Bitte einen Offizier auswählen:
+                <div class="typl1 meldung" onclick="tauscheFigur('l')"></div>
+                <div class="typs1 meldung" onclick="tauscheFigur('s')"></div>
+                <div class="typt1 meldung" onclick="tauscheFigur('t')"></div>
+                <div class="typd1 meldung" onclick="tauscheFigur('d')"></div>
+            </div>
+        </div>
+        <div id="inhalte">
+            <div id="optionen">
+                <form action="" method="post" name="formular" onsubmit="k_historieAnZug(zugeingabe.value); zugeingabe.value = ''; return false;">
+                    <fieldset id="fieldset_spieleinstellungen" class="zugeklappt">
+                        <legend onclick="fieldsetSchalter('spieleinstellungen')">Spieleinstellungen</legend>
+                        <fieldset class="starr">
+                            <legend>Stil</legend>
+                            <input type="radio" onclick="switchStyle('Kunterbunt')" id="bunt" name="radio" value="bunt" />
+                            <label for="bunt">Kunterbunt</label><br />
+                            <input type="radio" onclick="switchStyle('Schwarzweiß')" id="sw" name="radio" value="sw" checked="checked" />
+                            <label for="sw">Schwarzweiß</label><br />
+                        </fieldset>
+                        <fieldset class="starr">
+                            <legend>Spielhilfen</legend>
+                            <input type="checkbox" id="bedrohung" name="checkbox" value="bedrohung" />
+                            <label for="bedrohung">Bedrohung</label><br />
+                            <input type="checkbox" id="zughilfen" name="checkbox" value="zughilfen" />
+                            <label for="zughilfen">Zughilfen</label><br />
+                        </fieldset>
+                    </fieldset>
+                    <fieldset id="fieldset_spielzuege" class="zugeklappt">
+                        <legend onclick="fieldsetSchalter('spielzuege')">Spielzüge</legend>
+                        <fieldset class="starr">
+                            <legend>letzter Zug</legend>
+                            <p id="letzterzug">leer</p>
+                        </fieldset>
+                        <fieldset class="starr">
+                            <legend>Zugeingabe</legend>
+                            <input type="text" name="zugeingabe" size="7" maxlength="7" />
+                            <input type="submit" onclick="k_historieAnZug(zugeingabe.value); zugeingabe.value = ''; return false;" name="button_ok" value="OK" />
+                        </fieldset>
+                        <fieldset class="starr">
+                            <legend>Spielhistorie</legend>
+                            <input type="button" onclick="" name="button_laden" value="Laden" />
+                            <input type="button" onclick="" name="button_speichern" value="Speichern" /><br /><br />
+                            <input type="button" onclick="neuesSpiel()" name="button" value="Neues Spiel" />
+                        </fieldset>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- event.preventDefault() verhindert, dass Text markiert werden kann -->
+            <div id="schach" onmousedown="event.preventDefault()">
+                <!-- Container für die Schachfiguren, die via JavaScript hinzugefügt werden -->
+                <div id="figuren"></div>
+                <ul class="buchstaben">
+                    <li>a</li><li>b</li><li>c</li><li>d</li><li>e</li><li>f</li><li>g</li><li>h</li>
+                </ul>
+                <ul class="zahlen">
+                    <li>8</li><li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li>
+                </ul>
+                <div id="brett">
+                    <div id="id18" class="weiss"></div>
+                    <div id="id28" class="schwarz"></div>
+                    <div id="id38" class="weiss"></div>
+                    <div id="id48" class="schwarz"></div>
+                    <div id="id58" class="weiss"></div>
+                    <div id="id68" class="schwarz"></div>
+                    <div id="id78" class="weiss"></div>
+                    <div id="id88" class="schwarz"></div>
+
+                    <div id="id17" class="schwarz"></div>
+                    <div id="id27" class="weiss"></div>
+                    <div id="id37" class="schwarz"></div>
+                    <div id="id47" class="weiss"></div>
+                    <div id="id57" class="schwarz"></div>
+                    <div id="id67" class="weiss"></div>
+                    <div id="id77" class="schwarz"></div>
+                    <div id="id87" class="weiss"></div>
+
+                    <div id="id16" class="weiss"></div>
+                    <div id="id26" class="schwarz"></div>
+                    <div id="id36" class="weiss"></div>
+                    <div id="id46" class="schwarz"></div>
+                    <div id="id56" class="weiss"></div>
+                    <div id="id66" class="schwarz"></div>
+                    <div id="id76" class="weiss"></div>
+                    <div id="id86" class="schwarz"></div>
+
+                    <div id="id15" class="schwarz"></div>
+                    <div id="id25" class="weiss"></div>
+                    <div id="id35" class="schwarz"></div>
+                    <div id="id45" class="weiss"></div>
+                    <div id="id55" class="schwarz"></div>
+                    <div id="id65" class="weiss"></div>
+                    <div id="id75" class="schwarz"></div>
+                    <div id="id85" class="weiss"></div>
+
+                    <div id="id14" class="weiss"></div>
+                    <div id="id24" class="schwarz"></div>
+                    <div id="id34" class="weiss"></div>
+                    <div id="id44" class="schwarz"></div>
+                    <div id="id54" class="weiss"></div>
+                    <div id="id64" class="schwarz"></div>
+                    <div id="id74" class="weiss"></div>
+                    <div id="id84" class="schwarz"></div>
+
+                    <div id="id13" class="schwarz"></div>
+                    <div id="id23" class="weiss"></div>
+                    <div id="id33" class="schwarz"></div>
+                    <div id="id43" class="weiss"></div>
+                    <div id="id53" class="schwarz"></div>
+                    <div id="id63" class="weiss"></div>
+                    <div id="id73" class="schwarz"></div>
+                    <div id="id83" class="weiss"></div>
+
+                    <div id="id12" class="weiss"></div>
+                    <div id="id22" class="schwarz"></div>
+                    <div id="id32" class="weiss"></div>
+                    <div id="id42" class="schwarz"></div>
+                    <div id="id52" class="weiss"></div>
+                    <div id="id62" class="schwarz"></div>
+                    <div id="id72" class="weiss"></div>
+                    <div id="id82" class="schwarz"></div>
+
+                    <div id="id11" class="schwarz"></div>
+                    <div id="id21" class="weiss"></div>
+                    <div id="id31" class="schwarz"></div>
+                    <div id="id41" class="weiss"></div>
+                    <div id="id51" class="schwarz"></div>
+                    <div id="id61" class="weiss"></div>
+                    <div id="id71" class="schwarz"></div>
+                    <div id="id81" class="weiss"></div>
+                </div>
+                <ul class="zahlen">
+                    <li>8</li><li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li>
+                </ul>
+                <ul class="buchstaben">
+                    <li>a</li><li>b</li><li>c</li><li>d</li><li>e</li><li>f</li><li>g</li><li>h</li>
+                </ul>
+				<div id="error_box">
+				</div>
+			</div>
+            <div id="aus">
+                <fieldset id="fieldset_aus_s" class="zugeklappt">
+                    <legend onclick="fieldsetSchalter('aus_s')">schwarzer Spieler</legend>
+                    <div id="aus_s" ></div>
+                </fieldset>
+                <div id="zugrecht">Weiß am Zug<br /><br /></div>
+                <fieldset id="fieldset_aus_w" class="zugeklappt">
+                    <legend onclick="fieldsetSchalter('aus_w')">weißer Spieler</legend>
+                    <div id="aus_w" ></div>
+                </fieldset>
+            </div>
+
+        </div>
+        <script type="text/javascript" src="js/logik.js"></script>
+        <script type="text/javascript" src="js/gui.js"></script>
+    </body>
+</html>
