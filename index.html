@@ -5,9 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>schach.</title>
         <link rel="stylesheet" type="text/css" media="all" href="css/schach.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="css/sw.css" title="Schwarzweiß" />
-        <link rel="alternate stylesheet" type="text/css" media="all" href="css/bunt.css" title="Kunterbunt" />
-        <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="img/design/favicon.png" type="image/png" />
     </head>
     <body onload="k_initialisierung()">
         <div id="overlay">
@@ -29,25 +27,8 @@
         <div id="inhalte">
             <div id="optionen">
                 <form action="" method="post" name="formular" onsubmit="k_historieAnZug(zugeingabe.value); zugeingabe.value = ''; return false;">
-                    <fieldset id="fieldset_spieleinstellungen" class="zugeklappt">
-                        <legend onclick="fieldsetSchalter('spieleinstellungen')">Spieleinstellungen</legend>
-                        <fieldset class="starr">
-                            <legend>Stil</legend>
-                            <input type="radio" onclick="switchStyle('Kunterbunt')" id="bunt" name="radio" value="bunt" />
-                            <label for="bunt">Kunterbunt</label><br />
-                            <input type="radio" onclick="switchStyle('Schwarzweiß')" id="sw" name="radio" value="sw" checked="checked" />
-                            <label for="sw">Schwarzweiß</label><br />
-                        </fieldset>
-                        <fieldset class="starr">
-                            <legend>Spielhilfen</legend>
-                            <input type="checkbox" id="bedrohung" name="checkbox" value="bedrohung" />
-                            <label for="bedrohung">Bedrohung</label><br />
-                            <input type="checkbox" id="zughilfen" name="checkbox" value="zughilfen" />
-                            <label for="zughilfen">Zughilfen</label><br />
-                        </fieldset>
-                    </fieldset>
-                    <fieldset id="fieldset_spielzuege" class="zugeklappt">
-                        <legend onclick="fieldsetSchalter('spielzuege')">Spielzüge</legend>
+                    <fieldset id="fieldset_spielzuege" class="aufgeklappt">
+                        <legend onclick="fieldsetSchalter('spielzuege')">Spielverlauf</legend>
                         <fieldset class="starr">
                             <legend>letzter Zug</legend>
                             <p id="letzterzug">leer</p>

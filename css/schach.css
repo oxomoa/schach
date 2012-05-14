@@ -1,4 +1,6 @@
 body {
+    background-color:#000000;
+    color:#FFFFFF;
     font-family:'Verdana',sans-serif;
     cursor:default;
 }
@@ -16,7 +18,7 @@ div#overlay {
 	width:100%;
 	z-index:100;
 	display:none;
-	background-image: url(../img/pixel.png);
+	background-image: url(../img/design/pixel.png);
 }
 
 /*Container für Figuren der Offiziersauswahl*/
@@ -26,6 +28,30 @@ div.meldung {
     width:40px;
 	float:left;
     cursor:pointer;
+}
+
+/*Container für Offiziersauswahl des schwarzen Spielers*/
+div#meldung_s {
+    margin:136px auto 0;  /*empirische Werte für die Optik (top right bottom left)*/
+    height:100px;
+	width:300px;
+	padding-top:20px;
+	background-color:#000000;
+	color:#FFFFFF;
+	text-align:center;
+	display:none;
+}
+
+/*Container für Offiziersauswahl des weißen Spielers*/
+div#meldung_w {
+    margin:136px auto 0;  /*empirische Werte für die Optik (top right bottom left)*/
+    height:100px;
+	width:300px;
+	padding-top:20px;
+	background-color:#FFFFFF;
+	color:#000000;
+	text-align:center;
+	display:none;
 }
 
 label, legend {
@@ -102,13 +128,23 @@ div#brett {
     height:320px;
     width:320px;
     float:left;
+    border:4px double #FFFFFF;
 }
 
-/*Schachfelder*/
-div.schwarz, div.weiss {
+/*schwarze Schachfelder*/
+div.schwarz {
     height:40px;
     width:40px;
     float:left;
+    background-color:#000000;
+}
+
+/*weiße Schachfelder*/
+div.weiss {
+    height:40px;
+    width:40px;
+    float:left;
+    background-color:#FFFFFF;
 }
 
 /*Container für Figuren*/
@@ -155,4 +191,64 @@ ul.zahlen {
 ul.zahlen li {
     padding:0 6px 0 6px; /*für visuellen Abstand zum Schachbrett (top right bottom left)*/
     height:40px;
+}
+
+/*schwarze Bauern*/
+div.typb1 {
+    background-image:url(../img/figuren/bauer_s.png);
+}
+
+/*schwarze Springer*/
+div.typs1 {
+    background-image:url(../img/figuren/springer_s.png);
+}
+
+/*schwarze Läufer*/
+div.typl1 {
+    background-image:url(../img/figuren/laeufer_s.png);
+}
+
+/*schwarze Türme*/
+div.typt1 {
+    background-image:url(../img/figuren/turm_s.png);
+}
+
+/*schwarze Damen*/
+div.typd1 {
+    background-image:url(../img/figuren/dame_s.png);
+}
+
+/*schwarze Könige*/
+div.typk1 {
+    background-image:url(../img/figuren/koenig_s.png);
+}
+
+/*weiße Bauern*/
+div.typb0 {
+    background-image:url(../img/figuren/bauer_w.png);
+}
+
+/*weiße Springer*/
+div.typs0 {
+    background-image:url(../img/figuren/springer_w.png);
+}
+
+/*weiße Läufer*/
+div.typl0 {
+    background-image:url(../img/figuren/laeufer_w.png);
+}
+
+/*weiße Türme*/
+div.typt0 {
+    background-image:url(../img/figuren/turm_w.png);
+}
+
+/*weiße Damen*/
+div.typd0 {
+    background-image:url(../img/figuren/dame_w.png);
+}
+
+/*weiße Könige*/
+div.typk0 {
+    background-image:url(../img/figuren/koenig_w.png);
 }
