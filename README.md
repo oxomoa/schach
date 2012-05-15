@@ -19,7 +19,8 @@ The original author of the chess pieces graphics used within this project is [Co
 ## License
 
 **schach** is a chess game for web browsers written in JavaScript, embedded in a simple html/css website. It is designed for being used by two human players.
-Copyright (C) 2009 oxomoa
+
+Copyright © 2009 by oxomoa
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
