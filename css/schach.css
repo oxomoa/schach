@@ -5,6 +5,15 @@ body {
     cursor:default;
 }
 
+a {
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+div#informationen {
+    font-size:60%;
+}
+
 div#error_box {
 	padding:20px 0 0 40px;
 }

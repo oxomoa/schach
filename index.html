@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>schach.</title>
+        <title>Schach</title>
         <link rel="stylesheet" type="text/css" media="all" href="css/schach.css" />
         <link rel="shortcut icon" href="img/design/favicon.png" type="image/png" />
     </head>
@@ -27,7 +27,7 @@
         <div id="inhalte">
             <div id="optionen">
                 <form action="" method="post" name="formular" onsubmit="k_historieAnZug(zugeingabe.value); zugeingabe.value = ''; return false;">
-                    <fieldset id="fieldset_spielzuege" class="aufgeklappt">
+                    <fieldset id="fieldset_spielzuege" class="zugeklappt">
                         <legend onclick="fieldsetSchalter('spielzuege')">Spielverlauf</legend>
                         <fieldset class="starr">
                             <legend>letzter Zug</legend>
@@ -44,6 +44,21 @@
                             <input type="button" onclick="" name="button_speichern" value="Speichern" /><br /><br />
                             <input type="button" onclick="neuesSpiel()" name="button" value="Neues Spiel" />
                         </fieldset>
+                    </fieldset>
+                    <fieldset id="fieldset_informationen" class="zugeklappt">
+                        <legend onclick="fieldsetSchalter('informationen')">Informationen</legend>
+                        <div id="informationen">
+                            Favicon und Figuren © <a href='http://en.wikipedia.org/wiki/User:Cburnett' target='_blank'>Colin M.L. Burnett</a> (<a href='http://www.opensource.org/licenses/BSD-3-Clause/' target='_blank'>BSD 3-Clause</a>)
+                            <br/>
+                            <br/>
+                            © 2009, oxomoa (<a href='http://www.opensource.org/licenses/BSD-3-Clause/' target='_blank'>BSD 3-Clause</a>)
+                            <br/>
+                            <br/>
+                            <a href='https://github.com/oxomoa/schach/' target='_blank'>@GitHub</a>
+                            <br/>
+                            <br/>
+                            <a href='http://kahlfrost.de/impressum/' target='_blank'>Impressum</a>
+                        </div>
                     </fieldset>
                 </form>
             </div>
