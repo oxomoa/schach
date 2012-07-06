@@ -13,12 +13,12 @@ Sorry folks, but currently, almost the whole project (names of JavaScript variab
 
 ## Chess pieces
 
-The original author of the chess pieces graphics used within this project is [Colin M.L. Burnett](http://en.wikipedia.org/wiki/User:Cburnett). He published his work under the [BSD 3-Clause](http://www.opensource.org/licenses/BSD-3-Clause) license which is fully compatible with the license **schach** is published under.
+The original designer of the chess pieces graphics used within this project is [Colin M.L. Burnett](http://en.wikipedia.org/wiki/User:Cburnett). He published his work under the [BSD 3-Clause](http://www.opensource.org/licenses/BSD-3-Clause/) license which is fully compatible with the license **schach** is published under.
 
 
 ## License
 
-[BSD 3-Clause](http://www.opensource.org/licenses/BSD-3-Clause)
+[BSD 3-Clause](http://www.opensource.org/licenses/BSD-3-Clause/)
 
 Copyright © 2009, oxomoa
 
