@@ -204,60 +204,60 @@ ul.zahlen li {
 
 /*schwarze Bauern*/
 div.typb1 {
-    background-image:url(../img/figuren/bauer_s.png);
+    background-image:url(../img/figuren/bauer_s.svg);
 }
 
 /*schwarze Springer*/
 div.typs1 {
-    background-image:url(../img/figuren/springer_s.png);
+    background-image:url(../img/figuren/springer_s.svg);
 }
 
 /*schwarze Läufer*/
 div.typl1 {
-    background-image:url(../img/figuren/laeufer_s.png);
+    background-image:url(../img/figuren/laeufer_s.svg);
 }
 
 /*schwarze Türme*/
 div.typt1 {
-    background-image:url(../img/figuren/turm_s.png);
+    background-image:url(../img/figuren/turm_s.svg);
 }
 
 /*schwarze Damen*/
 div.typd1 {
-    background-image:url(../img/figuren/dame_s.png);
+    background-image:url(../img/figuren/dame_s.svg);
 }
 
 /*schwarze Könige*/
 div.typk1 {
-    background-image:url(../img/figuren/koenig_s.png);
+    background-image:url(../img/figuren/koenig_s.svg);
 }
 
 /*weiße Bauern*/
 div.typb0 {
-    background-image:url(../img/figuren/bauer_w.png);
+    background-image:url(../img/figuren/bauer_w.svg);
 }
 
 /*weiße Springer*/
 div.typs0 {
-    background-image:url(../img/figuren/springer_w.png);
+    background-image:url(../img/figuren/springer_w.svg);
 }
 
 /*weiße Läufer*/
 div.typl0 {
-    background-image:url(../img/figuren/laeufer_w.png);
+    background-image:url(../img/figuren/laeufer_w.svg);
 }
 
 /*weiße Türme*/
 div.typt0 {
-    background-image:url(../img/figuren/turm_w.png);
+    background-image:url(../img/figuren/turm_w.svg);
 }
 
 /*weiße Damen*/
 div.typd0 {
-    background-image:url(../img/figuren/dame_w.png);
+    background-image:url(../img/figuren/dame_w.svg);
 }
 
 /*weiße Könige*/
 div.typk0 {
-    background-image:url(../img/figuren/koenig_w.png);
+    background-image:url(../img/figuren/koenig_w.svg);
 }
