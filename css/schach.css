@@ -64,6 +64,7 @@ div#meldung_w {
 }
 
 label, legend {
+    color:#FFFFFF;
     cursor:pointer;
 }
 
@@ -205,59 +206,83 @@ ul.zahlen li {
 /*schwarze Bauern*/
 div.typb1 {
     background-image:url(../img/figuren/bauer_s.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*schwarze Springer*/
 div.typs1 {
     background-image:url(../img/figuren/springer_s.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*schwarze Läufer*/
 div.typl1 {
     background-image:url(../img/figuren/laeufer_s.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*schwarze Türme*/
 div.typt1 {
     background-image:url(../img/figuren/turm_s.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*schwarze Damen*/
 div.typd1 {
     background-image:url(../img/figuren/dame_s.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*schwarze Könige*/
 div.typk1 {
     background-image:url(../img/figuren/koenig_s.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*weiße Bauern*/
 div.typb0 {
     background-image:url(../img/figuren/bauer_w.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*weiße Springer*/
 div.typs0 {
     background-image:url(../img/figuren/springer_w.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*weiße Läufer*/
 div.typl0 {
     background-image:url(../img/figuren/laeufer_w.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*weiße Türme*/
 div.typt0 {
     background-image:url(../img/figuren/turm_w.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*weiße Damen*/
 div.typd0 {
     background-image:url(../img/figuren/dame_w.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 /*weiße Könige*/
 div.typk0 {
     background-image:url(../img/figuren/koenig_w.svg);
+    background-position:center;
+    background-repeat:no-repeat;
 }
